@@ -1,4 +1,4 @@
-# Title Here
+# Hack Yourself With Powershell Empire
 
 ###### By Steven Rakhmanchik and Israel Pina
 ---
@@ -6,7 +6,7 @@
 
 Our project demonstrates the capabilities of Powershell Empire, how it works, and how you can use it.
 
-## What is Powershell Empire?
+## "What is Powershell Empire?"
 
 Powershell Empire is a tool that helps create payloads in order to gain access to systems.
 
