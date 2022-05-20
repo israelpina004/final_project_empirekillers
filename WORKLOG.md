@@ -5,4 +5,9 @@
 
 ### Steven:
 * Started working on VM on remote machine to run kali to host empire powershell server which we will be able to access from our remote machines.
+
+# 5.20.22
+### Israel: 
+
+### Steven:
 * Continued working on VM and coming up with a list of possible exploits and how to use them through the software.
