@@ -4,7 +4,7 @@
 ---
 ## "What'd you guys make?"
 
-Our project demonstrates the capabilities of Powershell Empire, how it works, and how you can use it.
+Our project demonstrates the capabilities of Powershell Empire, how it works, and how you can (but shouldn't) use it.
 
 ## "What is Powershell Empire?"
 
