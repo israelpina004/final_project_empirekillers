@@ -3,7 +3,7 @@
 ##Empire Powershell Server Setup:
 
 	$ sudo apt install powershell-empire		# install package
-	$ sudo powershell-empire server 			# run server
+	$ sudo powershell-empire server 		# run server
 
 Empire Powershell also comes by default with Kali linux, which you can easily run in virtual box after installing the virtual box package for it here:
 
