@@ -11,3 +11,9 @@
 
 ### Steven:
 * Continued working on VM and coming up with a list of possible exploits and how to use them through the software.
+
+# 5.21.22
+### Israel: 
+
+### Steven:
+* Created presetation.md file and started detailing installation steps for empire powershell.
