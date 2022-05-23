@@ -4,4 +4,4 @@ We all don't like homework, but we trust that you'll enjoy this one. That's beca
 
 More specifically, you will learn to hack you own system using Powershell Empire.
 
-(To be expanded upon)
+(To be expanded upon.)
