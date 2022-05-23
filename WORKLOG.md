@@ -13,7 +13,11 @@
 * Continued working on VM and coming up with a list of possible exploits and how to use them through the software.
 
 # 5.21.22
-### Israel: 
+### Israel:
+* Started the HOMEWORK.md file and discussed ideas for homework with Steven. Will likely be a guide to hacking one own system. 
+* Updated the README to include installation steps for both Kali Linux and for other systems. Started to incorporate steps for running the program.
+* Included links to all the .md files.
 
 ### Steven:
 * Created presetation.md file and started detailing installation steps for empire powershell.
+* Discussed homework ideas with Israel. 
