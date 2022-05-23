@@ -51,10 +51,10 @@ command. For other systems, the following is shown once installation is complete
 
 Installing Starkiller is much simpler. All Starkiller is is a GUI application for Empire. All it takes is going to [this link](https://github.com/BC-SECURITY/Starkiller/releases) and downloading the "starkiller.Setup.1.10.0.exe" file.
 
-##"So how was the work distribution like?"
+## "So how was the work distribution like?"
 
 See our [WORKLOG.md file](https://github.com/israelpina004/final_project_empirekillers/blob/master/WORKLOG.md).https://github.com/israelpina004/final_project_empirekillers/blob/master/WORKLOG.md
 
-##"This all sounds really cool."
+## "This all sounds really cool."
 
 Thanks! That's because it is.
