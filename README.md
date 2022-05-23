@@ -38,10 +38,10 @@ On other systems, run these commands:
 
 This will grab the Empire repository from github and install Empire on your system. Follow the instructions carefully.
 
-To run Empire on Kali Linux, simply run the $ powershell empire
+To run Empire on Kali Linux, simply run the $ powershell-empire
 command. For other systems, the following is shown once installation is complete:
 
-$ [+] Run the following commands in separate terminals to start Empire
-[*] ./ps-empire server
-[*] ./ps-empire client
-[*] source ~/.bashrc to enable nim
+$ Run the following commands in separate terminals to start Empire
+./ps-empire server
+./ps-empire client
+source ~/.bashrc to enable nim
