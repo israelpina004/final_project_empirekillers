@@ -24,12 +24,24 @@ See our PRESENTATION.md file. (We do not encourage any illegal activity!)
 
 ### "Tell me more!"
 
-Much more can be learned on our PRESENTATION.md file.
+Like how to download Powershell Empire and Starkiller? Sure.
 
-### "So who did most of the work?"
+If you have Kali Linux, all it takes is the command:
 
-We can assure you the workload was evenly distributed. See our WORKLOG.md file.
+	$ sudo apt install powershell-empire
 
-### "Oh, okay. I'll be sure to check them out."
+On other systems, run these commands:
 
-Awesome.
+	$ git clone https://github.com/BC-SECURITY/Empire.git
+	$ cd Empire
+	$ sudo ./setup./install.sh
+
+This will grab the Empire repository from github and install Empire on your system. Follow the instructions carefully.
+
+To run Empire on Kali Linux, simply run the $ powershell empire
+command. For other systems, the following is shown once installation is complete:
+
+$ [+] Run the following commands in separate terminals to start Empire
+[*] ./ps-empire server
+[*] ./ps-empire client
+[*] source ~/.bashrc to enable nim
