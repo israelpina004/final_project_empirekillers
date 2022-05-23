@@ -48,3 +48,5 @@ command. For other systems, the following is shown once installation is complete
 	./ps-empire server
 	./ps-empire client
 	source ~/.bashrc to enable nim
+
+Installing Starkiller is much simpler. Starkiller is simply a GUI application for Empire. All it takes is going to [this link](https://github.com/BC-SECURITY/Starkiller/releases) and downloading the "starkiller.Setup.1.10.0.exe" file.
