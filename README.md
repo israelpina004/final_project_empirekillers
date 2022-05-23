@@ -20,7 +20,7 @@ A payload is a file that contains malicious code used to establish a backdoor in
 
 ### "Wow, really? How do I do this?"
 
-See our PRESENTATION.md file. (We do not encourage any illegal activity!)
+See our [PRESENTATION.md file](https://github.com/israelpina004/final_project_empirekillers/blob/master/presentation.md). (We do not encourage any illegal activity!)
 
 ### "Tell me more!"
 
@@ -49,4 +49,12 @@ command. For other systems, the following is shown once installation is complete
 	./ps-empire client
 	source ~/.bashrc to enable nim
 
-Installing Starkiller is much simpler. Starkiller is simply a GUI application for Empire. All it takes is going to [this link](https://github.com/BC-SECURITY/Starkiller/releases) and downloading the "starkiller.Setup.1.10.0.exe" file.
+Installing Starkiller is much simpler. All Starkiller is is a GUI application for Empire. All it takes is going to [this link](https://github.com/BC-SECURITY/Starkiller/releases) and downloading the "starkiller.Setup.1.10.0.exe" file.
+
+##"So how was the work distribution like?"
+
+See our [WORKLOG.md file](https://github.com/israelpina004/final_project_empirekillers/blob/master/WORKLOG.md).https://github.com/israelpina004/final_project_empirekillers/blob/master/WORKLOG.md
+
+##"This all sounds really cool."
+
+Thanks! That's because it is.
