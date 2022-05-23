@@ -53,7 +53,7 @@ Installing Starkiller is much simpler. All Starkiller is is a GUI application fo
 
 ## "So how was the work distribution like?"
 
-See our [WORKLOG.md file](https://github.com/israelpina004/final_project_empirekillers/blob/master/WORKLOG.md).https://github.com/israelpina004/final_project_empirekillers/blob/master/WORKLOG.md
+See our [WORKLOG.md file](https://github.com/israelpina004/final_project_empirekillers/blob/master/WORKLOG.md).
 
 ## "This all sounds really cool."
 
