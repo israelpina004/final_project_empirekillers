@@ -4,6 +4,9 @@
 * From this date, we have started a new project.
 ### Israel:
 * Created the PRESENTATION, WORKLOG, HOMEWORK, and README files.
-* Started the README file, including a short, incomplete description of our project.
+* Started the README file, including a short, incomplete description of our project, and the presentation file.
+* Sources used:
+	* https://infosecwriteups.com/breaking-down-sha-512-algorithm-1fdb9cc9413a
+	* https://komodoplatform.com/en/academy/sha-512/#:~:text=SHA%2D512%2C%20or%20Secure%20Hash,hashing%2C%20and%20digital%20record%20verification.
 
 ### Steven:
