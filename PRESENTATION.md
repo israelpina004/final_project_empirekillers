@@ -28,6 +28,8 @@ of 64-bit words is created. The chunk is copied into the first 16 words of the
 array and these words are extended into the remaining words in the array
 through a xor algorithm. (Attach pic here?)
 
+![xoring](https://user-images.githubusercontent.com/90664097/170178248-ffa48bba-6c1e-4171-847a-9e6234347bfe.png)
+
 The bits in each default hash value are manipulated and used to in turn
 manipulate each word in the array, compressing the chunk. The compressed chunk
 is then added to each hash value. 
