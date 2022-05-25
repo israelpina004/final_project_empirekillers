@@ -26,7 +26,7 @@ numbers, is initialized.
 The message is broken into 1024-bit chunks. For each chunk, an 80-entry array
 of 64-bit words is created. The chunk is copied into the first 16 words of the
 array and these words are extended into the remaining words in the array
-through a xor algorithm. (Attach pic here?)
+through a xor algorithm.
 
 ![xoring](https://user-images.githubusercontent.com/90664097/170178248-ffa48bba-6c1e-4171-847a-9e6234347bfe.png)
 
