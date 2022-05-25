@@ -13,7 +13,7 @@
 
 ## 5.24.22
 
-###Israel:
+### Israel:
 * Included links to the presentation and homework files in the README.
 * Expanded upon the presentation file, including more in the description of how SHA-512 works.
 * Working with Steven on the encryption program.
