@@ -16,5 +16,5 @@ or 64 bytes, long. It is used in email address hashing, password hashing, and bl
 
 ### "How does it work?"
 
-See our PRESENTATION.md file.
+See our (PRESENTATION.md file)[https://github.com/israelpina004/final_project_empirekillers/blob/master/PRESENTATION.md].
 
