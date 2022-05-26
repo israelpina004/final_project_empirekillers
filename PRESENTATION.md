@@ -47,3 +47,7 @@ is then added to each hash value.
 ![algorithm2](https://user-images.githubusercontent.com/90664097/170410807-242ea3f6-223e-454d-a456-0b5bb3a36279.png)
 
 After all the chunks are gone through, the hash is created.
+
+In our program, we have implemented this very algorithm. We defined variables \_k and \_h, which are the array of round constants and the array of initial hash values, respectively.
+
+![code1](https://user-images.githubusercontent.com/90664097/170411404-a225c8e1-c0c3-4ffb-a347-0ff28b418648.png)
