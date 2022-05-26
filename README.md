@@ -3,7 +3,7 @@
 
 ## "What did you guys make?"
 
-We have replicated the SHA-512 encryption algorithm through a Python program.
+We have replicated the SHA-512 encryption algorithm through a Python program. It is run through the terminal.
 
 ### "How can I check if this works?"
 
