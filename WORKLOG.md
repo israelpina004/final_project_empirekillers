@@ -21,3 +21,9 @@
 	* https://en.wikipedia.org/wiki/SHA-2#Pseudocode
 
 ### Steven:
+
+## 5.25.22
+
+### Israel:
+* Expanded upon the presentation file by further explaining the SHA-512 algorithm.
+* Included more images and started to incorporate our program into our presentation.
