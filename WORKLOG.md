@@ -27,3 +27,10 @@
 ### Israel:
 * Expanded upon the presentation file by further explaining the SHA-512 algorithm.
 * Included more images and started to incorporate our program into our presentation.
+
+## 5.28.22
+
+### Israel:
+* Continued to expand upon the presentation file, further explaining what hashes are and why it is a good thing that they are not reversible or decryptable.
+* Source used:
+	* https://www.csoonline.com/article/3602698/hashing-explained-why-its-your-best-bet-to-protect-stored-passwords.html
