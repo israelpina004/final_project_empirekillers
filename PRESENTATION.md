@@ -51,3 +51,7 @@ After all the chunks are gone through, the hash is created.
 In our program, we have implemented this very algorithm. We defined variables \_k and \_h, which are the array of round constants and the array of initial hash values, respectively.
 
 ![code1](https://user-images.githubusercontent.com/90664097/170411404-a225c8e1-c0c3-4ffb-a347-0ff28b418648.png)
+
+We then take a plaintext message, prompted from the user, and append bits to it. The complicated compression step is then performed on the message. Here's what it looks like in our code:
+
+
