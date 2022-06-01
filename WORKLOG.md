@@ -34,3 +34,18 @@
 * Continued to expand upon the presentation file, further explaining what hashes are and why it is a good thing that they are not reversible or decryptable.
 * Source used:
 	* https://www.csoonline.com/article/3602698/hashing-explained-why-its-your-best-bet-to-protect-stored-passwords.html
+
+## 5.30.22
+
+### Israel
+* Made minor adjustments to the presentation file.
+* Working with Steven on the hashing program.
+
+## 5.31.22
+
+### Israel
+* Included the diagram which provides a visual representation of the compression step of the hashing algorithm.
+* Made minor adjustments to the presentation file.
+* Continuing working with Steven on the hashing program.
+* Source used:
+	* https://infosecwriteups.com/breaking-down-sha-512-algorithm-1fdb9cc9413a
