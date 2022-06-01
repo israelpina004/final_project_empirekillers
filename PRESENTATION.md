@@ -42,9 +42,9 @@ through a xor algorithm.
 
 The bits in each default hash value are manipulated and used to in turn
 manipulate each word in the array, compressing the chunk. The compressed chunk
-is then added to each hash value. 
+is then added to each hash value. The compression portion of the algorithm can be expressed through this diagram:
 
-![algorithm2](https://user-images.githubusercontent.com/90664097/170410807-242ea3f6-223e-454d-a456-0b5bb3a36279.png)
+![sha512](https://user-images.githubusercontent.com/90664097/171306658-59844bd2-55c8-4c1a-87eb-170cfc26708e.png)
 
 After all the chunks are gone through, the hash is created.
 
