@@ -2,7 +2,7 @@
 # What's SHA-512?
 
 SHA-512 is a hashing algorithm used to convert text into another string of text of a fixed length. Each SHA-512 string is 512 bits,
-or 64 bytes, long, represented by a 128-digit hexadecimal number. It is used in email address hashing, password hashing, and blockchain projects, among other things. SHA-512 hashes cannot be "decrypted," as hashes do not encrypt data, and it is not reversible. Hashes are primarily used in authentication systems to be stored in place of plaintext passwords, so there is no need for them to be decryptable or reversible; in fact, it's a good thing they aren't. If a hacker were to get into a password database, they would not be able to do anything malicious if all there is are hashes of passwords. Here is an example of hashed text:
+or 64 bytes, long, represented by a 128-digit hexadecimal number. It is used in email address hashing, password hashing, and blockchain projects SHA-512 hashes cannot be "decrypted," as hashes do not encrypt data, and it is not reversible. Hashes are primarily used in authentication systems to be stored in place of plaintext passwords, so there is no need for them to be decryptable or reversible; in fact, it's a good thing they aren't. If a hacker were to get into a password database, they would not be able to do anything malicious if all there is are hashes of passwords. Here is an example of hashed text:
 
       Original Text: Special Military Operation
   
@@ -52,6 +52,8 @@ In our program, we have implemented this very algorithm. We defined variables \_
 
 ![code1](https://user-images.githubusercontent.com/90664097/170411404-a225c8e1-c0c3-4ffb-a347-0ff28b418648.png)
 
-We then take a plaintext message, prompted from the user, and append bits to it. The complicated compression step is then performed on the message. Here's what it looks like in our code:
+We then take a plaintext message, prompted from the user, and append bits to it. The complicated compression step is then performed on the message.
 
+# How Secure is SHA-512?
 
+The more bits a message digest has, the more difficult it is to break. Thus, SHA-512 is more secure than other hashing algorithms that output message digests that are comprised of fewer bits. SHA-2 was first published in 2001 and is still in use to this day. However, as computer processing becomes more advanced, SHA-2 hashing algorithms become more vulnerable to attacks, similar to what happened with previous SHA incarnations. Indeed, since 2016, digital certificate authorities have not been allowed to issue SHA-1-signed certificates. Nonetheless, SHA-2 is still considered to be the most secure hashing algorithm, even as SHA-3 was released in 2015. SHA-3 has not been made the industry standard because during its release, companies were the middle of migrating from SHA-1 to SHA-2 and SHA-3 is slower on the software side. However, as computers become more powerful, we will likely see a transition from SHA-2 into SHA-3.
