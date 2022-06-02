@@ -35,13 +35,12 @@ numbers, is initialized.
 
 The message is broken into 1024-bit chunks. For each chunk, an 80-entry array
 of 64-bit words is created. The chunk is copied into the first 16 words of the
-array and these words are extended into the remaining words in the array
-through a xor algorithm.
+array and these words are extended into the remaining words in the array.
 
 ![algorithm1](https://user-images.githubusercontent.com/90664097/170410750-6dd7db11-45cf-4b68-b395-fc86b4f965ec.png)
 
-The bits in each default hash value are manipulated and used to in turn
-manipulate each word in the array, compressing the chunk. The compressed chunk
+The bits in each default hash value are manipulated through bitwise operations and thus
+each word in the array is manipulated, compressing the chunk. The compressed chunk
 is then added to each hash value. The compression portion of the algorithm can be expressed through this diagram:
 
 ![sha512](https://user-images.githubusercontent.com/90664097/171306658-59844bd2-55c8-4c1a-87eb-170cfc26708e.png)
