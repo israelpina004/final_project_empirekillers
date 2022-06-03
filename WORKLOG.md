@@ -50,7 +50,7 @@
 * Source used:
 	* https://infosecwriteups.com/breaking-down-sha-512-algorithm-1fdb9cc9413a
 
-#6.1.22
+# 6.1.22
 
 ### Israel
 * Included the "How Secure is SHA-512?" section in the presentation file.
@@ -59,3 +59,8 @@
 	* https://en.wikipedia.org/wiki/SHA-3#:~:text=SHA%2D3%20(Secure%20Hash%20Algorithm,%2D1%20and%20SHA%2D2.
 	* https://en.wikipedia.org/wiki/SHA-2
 	* https://sectigo.com/resource-library/what-is-sha-encryption
+
+# 6.2.22
+
+### Israel
+* Updated the homework file.
