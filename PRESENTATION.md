@@ -4,9 +4,9 @@
 SHA-512 is a hashing algorithm used to convert text into another string of text of a fixed length. Each SHA-512 string is 512 bits,
 or 64 bytes, long, represented by a 128-digit hexadecimal number. It is used in email address hashing, password hashing, and blockchain projects. SHA-512 hashes cannot be "decrypted," as hashes do not encrypt data, and it is not reversible. Hashes are primarily used in authentication systems to be stored in place of plaintext passwords, so there is no need for them to be decryptable or reversible; in fact, it's a good thing they aren't. If a hacker were to get into a password database, they would not be able to do anything malicious if all there is are hashes of passwords. Here is an example of hashed text:
 
-      Original Text: Special Military Operation
+      Original Text: Crimea 2014
   
-      SHA-512: 6300B1EDB81058D3BD705A9B5981600B6FFC9BE1F9E0CB36F0F6BD4B6EE41E3FAA609D16C0131451AD5EB2C392B284933C87BCDBDA52B32410A29E227DAB49DF
+      SHA-512: faf3624934859414d2b8508886537c03353cce7932dd34116edc5233f0f4e08e893fc2a0a74236733a4139f1362301c4fc48bd6d6f5346af577e1f0cda1c1e3e
 
 # How SHA-512 Works
 
