@@ -30,7 +30,7 @@ We have replicated the SHA-512 encryption algorithm through a Python program. It
 
 ### "How can I check if this works?"
 
-(To be expanded upon once our program is complete.)
+Run our program with a specific word or phrase and run "echo "(same word or phrase)" | sha512sum". The two outputs should be the same.
 
 ### "How does it work?"
 
