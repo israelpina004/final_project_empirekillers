@@ -14,14 +14,14 @@ Message can be:  *anything*
 
 ### Example:
 ```
-$ python3 sha.py 256 Special Military Operation            
+$ python3 sha.py 256 "Hello World"
   
-  31ea759d69005ab049d37aded782ed7f4ea3ff53719acd7a5a4d54388dd200fb
+  a591a6d40bf420404a011733cfb7b190d62c65bf0bcda32b57b277d9ad9f146e
 ```
 
 We can check by using this website: *https://emn178.github.io/online-tools/sha512.html*
 
-The hash comes out to be the same:  *31ea759d69005ab049d37aded782ed7f4ea3ff53719acd7a5a4d54388dd200fb*
+The hash comes out to be the same:  *a591a6d40bf420404a011733cfb7b190d62c65bf0bcda32b57b277d9ad9f146e*
 
 
 ## "What did you guys make?"
