@@ -1,4 +1,4 @@
-# SHA-512 Encryption
+# SHA Encryption
 ##### By Steven Rakhmanchik and Israel Pina
 
 ## How to run
