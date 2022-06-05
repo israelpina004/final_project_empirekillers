@@ -8,17 +8,18 @@
 ```
 $ python3 sha.py [bits] [message]            
 ```
-**Bits can be:**     *224, 256, 384, 512*
-**Message can be:**  *anything*
+Bits can be:     *224, 256, 384, 512*
+Message can be:  *anything*
 
 ### Example:
 ```
 $ python3 sha.py 256 Special Military Operation            
   
-  997c544f1be0a2dde15ce4e764321511ce9abdb34c7e7c661439e0382191a396
+  31ea759d69005ab049d37aded782ed7f4ea3ff53719acd7a5a4d54388dd200fb
 ```
 
-**We can check by using this website, which gives us the same result:** *https://emn178.github.io/online-tools/sha512.html*
+We can check by using this website: *https://emn178.github.io/online-tools/sha512.html*
+The hash comes out to be the same:  *31ea759d69005ab049d37aded782ed7f4ea3ff53719acd7a5a4d54388dd200fb*
 
 
 ## "What did you guys make?"
