@@ -1,68 +1,87 @@
 import constants as c
+import sys
+def msg2chunks(message, bits):
+    message_bin = ''
 
-def _msg2chunks(message_, chunk_info):
-    chunk_len, len_len = chunk_info
-    message, leading0s = message_
-    message_len = message.bit_length() + leading0s
-    if message_len >= 1<<128:
-        raise RuntimeError('Big Input ;(')
-    message <<= 1; message += 1 # Append a 1
-    message_len += 1
-    message <<= chunk_len - (message_len % chunk_len)
-    if message % chunk_len > chunk_len - len_len:
-        message <<= chunk_len
-    message += message_len - 1
-    message_len = message.bit_length() + leading0s
-    if message_len % chunk_len != 0:
-        raise RuntimeError('Chunks had bad length of' + str(message_len))
-    chunks = [(message >> (chunk_len * i)) & ((1 << chunk_len) - 1)
-            for i in range(int(message_len / chunk_len))]
-    chunks.reverse()
+    for i in message.encode():
+        message_bin += fill_0s(bin(i)[2:], 8)
+    length = len(message_bin)
+    message_bin += '1'
+    chunks = []
+    if bits in (224, 256):
+        chunklen = 512
+        lenlen = 64
+    elif bits in (384, 512):
+        chunklen = 1024
+        lenlen = 128
+    pad_0s = '0' * (chunklen - (len(message_bin) + lenlen) % chunklen)
+    chunk_bin = message_bin + pad_0s
+    length_bin = fill_0s(bin(length)[2:], lenlen)
+    chunk_bin += length_bin
+    chunks = []
+    if len(chunk_bin) > chunklen:
+        for i in range(int(len(chunk_bin) / chunklen)):
+            chunks.append(chunk_bin[chunklen*i:chunklen*(i+1)])
+    else:
+        chunks = [chunk_bin]
     return chunks
-def _words(chunk, ct, mod, C):
+def fill_0s(val, places):
+    out = ((places - len(val)) * '0') + val
+    return out
+def _words(chunk_bin, ct, mod, C):
     w = [0 for i in range(ct)]
     for i in range(16):
-        mask = 0xffffffff << (512-32*(i+1))
-        w[i] = (chunk & mask) >> (512-32*(i+1))
+        start = mod*i
+        end = mod*(i+1)
+        w[i] = int(chunk_bin[start:end], 2)
     for i in range(16, ct):
-        s0 = (_ror(w[i-15], C[2][0], mod) ^ _ror(w[i-15], C[2][1], mod) ^
-                (w[i-15]>>C[2][2]))
-        s1 = (_ror(w[i-2], C[3][0], mod) ^ _ror(w[i-2], C[3][1], mod) ^
-                (w[i-2]>>C[3][2]))
-        w[i] = (w[i-16] + s0 + w[i-7] + s1) % (2**mod)
+        s0 = ror(w[i-15], C[2][0], mod)^ror(w[i-15], C[2][1], mod)^(w[i-15] >> C[2][2])
+        s1 = ror(w[i-2], C[3][0], mod)^ror(w[i-2], C[3][1], mod)^(w[i-2] >> C[3][2])
+        w[i] = (w[i-16] + s0 + w[i-7] + s1) % 2**mod
     return w
-def _ror(num, val, mod):
+def ror(num, val, mod):
     pre = (num % 2 ** val) * 2**(mod - val)
     post = num >> val
     return pre + post
-def _hash(message, algo, debug="no"):
-    conversion_codes = {'sha224': (256, 224, 64, 32, (512, 64)), 'sha256': (256, 256, 64, 32, (512, 64)), 'sha384': (512, 384, 80, 64, (1024, 128)), 'sha512': (512, 512, 80, 64, (1024, 128)), 'sha512/224': (512, 224, 80, 64, (1024, 128)), 'sha512/256': (512, 256, 80, 64, (1024, 128))}
-    bits, keep, rounds, mod, chunk_info = conversion_codes[algo]
-    sh = bits - keep
-    chunks = _msg2chunks(message, chunk_info)
-    if "chunk" in debug or "all" in debug:
-        print([hex(i) for i in chunks])
-    h, K, C = c.constants(algo)
+def sha2hash(message, bits, sh):
+    if not bits in (224, 256, 384, 512):
+        print('Only standard SHA2 functions are supported')
+        sys.exit()
+    if bits in (224, 256):
+        rounds = 64
+        mod = 32
+    elif bits in (384, 512):
+        rounds = 80
+        mod = 64
+    chunks = msg2chunks(message, bits)
+    h, k, C = c.constants(bits, sh)
     for chunk in chunks:
         xs = h[:]
         w = _words(chunk, rounds, mod, C)
-        if "word" in debug or "all" in debug:
-            print([hex(i) for i in w])
         for i in range(rounds):
-            S1 = (_ror(xs[4], C[1][0], mod)^_ror(xs[4], C[1][1], mod) ^
-                    _ror(xs[4], C[1][2], mod))
+            S1 = ror(xs[4], C[1][0], mod)^ror(xs[4], C[1][1], mod)^ror(xs[4], C[1][2], mod)
             ch = (xs[4] & xs[5])^(~xs[4] & xs[6])
-            temp = (xs[7] + S1 + ch + K[i] + w[i]) % 2**mod
+            temp = (xs[7] + S1 + ch + k[i] + w[i]) % 2**mod
             xs[3] = (xs[3] + temp) % 2**mod
-            S0 = (_ror(xs[0], C[0][0], mod)^_ror(xs[0], C[0][1], mod) ^
-                    _ror(xs[0], C[0][2], mod))
+            S0 = ror(xs[0], C[0][0], mod)^ror(xs[0], C[0][1], mod)^ror(xs[0], C[0][2], mod)
             maj = (xs[0] & xs[1])^(xs[0] & xs[2])^(xs[1] & xs[2])
             temp = (temp + S0 + maj) % 2**mod
             xs = [temp] + [xs[i-1] for i in range(1, 8)]
-            if "intern" in debug or "all" in debug:
-                bytes = chunk_info[1] // 8
-                print(str(i).zfill(2) + ': ' +
-                        ' '.join([hex(int(i))[2:].zfill(bytes) for i in xs]))
         h = [(h[i] + xs[i]) % 2**mod for i in range(8)]
     digest = sum([h[i] << mod * (7-i) for i in range(8)]) >> sh
-    return(digest.to_bytes(int(keep / 8), byteorder='big'))
+    return(digest)
+def main():
+    bits = sys.argv[1]
+    if bits in ('512/224', '512/256'):
+        sh = 512 - int(bits[4:])
+        bits = 512
+    else:
+        bits = int(bits)
+        sh = {224:32, 256:0, 384:128, 512:0}[bits]
+    try: message = sys.argv[2]
+    except IndexError: message = ''
+    digest = sha2hash(message, bits, sh)
+    ans = hex(digest)
+    print(ans[2:len(ans)])
+if __name__ == '__main__':
+    main()
