@@ -1,8 +1,7 @@
 
-# What's SHA-512?
+# What's SHA?
 
-SHA-512 is a hashing algorithm used to convert text into another string of text of a fixed length. Each SHA-512 string is 512 bits,
-or 64 bytes, long, represented by a 128-digit hexadecimal number. It is used in email address hashing, password hashing, and blockchain projects. SHA-512 hashes cannot be "decrypted," as hashes do not encrypt data, and it is not reversible. Hashes are primarily used in authentication systems to be stored in place of plaintext passwords, so there is no need for them to be decryptable or reversible; in fact, it's a good thing they aren't. If a hacker were to get into a password database, they would not be able to do anything malicious if all there is are hashes of passwords. Here is an example of hashed text:
+SHA is a <u>S</u>ecure <u>H</u>ashing <u>A</u>lgorithm used to convert text into another string of text of a fixed length. The length of a SHA hash depends on which version is being utilized. The number representing the length of the hash string in bits (exp. a SHA-512 hash is 512 bits long). It is used in email address hashing, password hashing, and blockchain projects. SHA-512 hashes cannot be "decrypted," as hashes do not encrypt data, and it is not reversible. Hashes are primarily used in authentication systems to be stored in place of plaintext passwords, so there is no need for them to be decryptable or reversible; in fact, it's a good thing they aren't. If a hacker were to get into a password database, they would not be able to do anything malicious if all there is are hashes of passwords. Here is an example of hashed text:
 
     Original Text: Crimea 2014
   
