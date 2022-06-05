@@ -7,17 +7,15 @@
 ### Usage:
 ```
 $ python3 sha.py [bits] [message]            
-  
-  9b71d224bd62f3785d96d46ad3ea3d73319bfbc2890caadae2dff72519673ca72323c3d99ba5c11d7c7acc6e14b8c5da0c4663475c2e5c3adef46f73bcdec043
 ```
 **Bits can be:**     *224, 256, 384, 512*
 **Message can be:**  *anything*
 
 ### Example:
 ```
-$ python3 sha.py 512 hello world            
+$ python3 sha.py 256 Special Military Operation            
   
-  9b71d224bd62f3785d96d46ad3ea3d73319bfbc2890caadae2dff72519673ca72323c3d99ba5c11d7c7acc6e14b8c5da0c4663475c2e5c3adef46f73bcdec043
+  997c544f1be0a2dde15ce4e764321511ce9abdb34c7e7c661439e0382191a396
 ```
 
 **We can check by using this website, which gives us the same result:** *https://emn178.github.io/online-tools/sha512.html*
