@@ -1,6 +1,9 @@
 # SHA-512 Encryption
 ##### By Steven Rakhmanchik and Israel Pina
 
+## How to run
+###(cause lets be honest that's all most of you care about)
+
 ## "What did you guys make?"
 
 We have replicated the SHA-512 encryption algorithm through a Python program. It is run through the terminal.
