@@ -2,7 +2,7 @@
 ##### By Steven Rakhmanchik and Israel Pina
 
 ## How to run
-*(cause lets be honest that's all most of you care about)*
+*(cause lets be honest that's all you're here for)*
 
 ### Usage:
 ```
