@@ -9,6 +9,7 @@
 $ python3 sha.py [bits] [message]            
 ```
 Bits can be:     *224, 256, 384, 512*
+
 Message can be:  *anything*
 
 ### Example:
@@ -19,6 +20,7 @@ $ python3 sha.py 256 Special Military Operation
 ```
 
 We can check by using this website: *https://emn178.github.io/online-tools/sha512.html*
+
 The hash comes out to be the same:  *31ea759d69005ab049d37aded782ed7f4ea3ff53719acd7a5a4d54388dd200fb*
 
 
