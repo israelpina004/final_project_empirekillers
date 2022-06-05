@@ -39,3 +39,5 @@ See our [PRESENTATION.md file](https://github.com/israelpina004/final_project_em
 ## "What's the homework?"
 
 You can find our homework assignment in the [HOMEWORK.md file](https://github.com/israelpina004/final_project_empirekillers/blob/master/HOMEWORK.md).
+
+*;) we do a little trolling ♡*
