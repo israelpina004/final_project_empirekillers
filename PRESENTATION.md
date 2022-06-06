@@ -1,15 +1,15 @@
 
 # What's SHA?
 
-SHA is a <u>S</u>ecure <u>H</u>ashing <u>A</u>lgorithm used to convert text into another string of text of a fixed length. The length of a SHA hash depends on which version is being utilized. The number representing the length of the hash string in bits (exp. a SHA-512 hash is 512 bits long). It is used in email address hashing, password hashing, and blockchain projects. SHA-512 hashes cannot be "decrypted," as hashes do not encrypt data, and it is not reversible. Hashes are primarily used in authentication systems to be stored in place of plaintext passwords, so there is no need for them to be decryptable or reversible; in fact, it's a good thing they aren't. If a hacker were to get into a password database, they would not be able to do anything malicious if all there is are hashes of passwords. Here is an example of hashed text:
+SHA is a Secure <u>H</u>ashing <u>A</u>lgorithm used to convert text into another string of text of a fixed length. The length of a SHA hash depends on which version is being utilized. The number representing the length of the hash string in bits (exp. a SHA-512 hash is 512 bits long). It is used in email address hashing, password hashing, blockchain projects, and general security applications and protocols. SHA hashes cannot be "decrypted," as hashes do not encrypt data, and they are not reversible. Hashes are primarily used in authentication systems to be stored in place of plaintext passwords, so there is no need for them to be decryptable or reversible; in fact, it's a good thing they aren't. If a hacker were to get into a password database, they would not be able to do anything malicious if all there is are hashes of passwords. Here is an example of hashed text:
 
     Original Text: Crimea 2014
   
     SHA-512: faf3624934859414d2b8508886537c03353cce7932dd34116edc5233f0f4e08e893fc2a0a74236733a4139f1362301c4fc48bd6d6f5346af577e1f0cda1c1e3e
 
-# How SHA-512 Works
+# How SHA Works
 
-The SHA-512 algorithm can be separated into four steps.
+The SHA-2 hashing algorithms differ slightly. We will use the SHA-512 hashing algorithm as an example, which can be separated into four steps.
 
 ## 1 and 2. Appending bits
 
@@ -22,7 +22,7 @@ and appending that to the end of the message block.
 
 ## 3. Setting up default values and round constants
 
-Default hash values are initialized by taking the first 64
+Eight default hash values are initialized by taking the first 64
 bits of the fractional parts of the square roots of the first eight prime
 numbers.
 
@@ -36,10 +36,7 @@ The message is broken into 1024-bit chunks. For each chunk, an 80-entry array
 of 64-bit words is created. The chunk is copied into the first 16 words of the
 array and these words are extended into the remaining words in the array.
 
-![algorithm1](https://user-images.githubusercontent.com/90664097/170410750-6dd7db11-45cf-4b68-b395-fc86b4f965ec.png)
-
-The bits in each default hash value are manipulated through bitwise operations and thus
-each word in the array is manipulated, compressing the chunk. The compressed chunk
+The bits in each default hash value are manipulated through bitwise operations, compressing the chunk. The compressed chunk
 is then added to each hash value. The compression portion of the algorithm can be expressed through this diagram:
 
 ![sha512](https://user-images.githubusercontent.com/90664097/171306658-59844bd2-55c8-4c1a-87eb-170cfc26708e.png)
@@ -50,8 +47,19 @@ In our program, we have implemented this very algorithm. We defined variables \_
 
 ![code1](https://user-images.githubusercontent.com/90664097/170411404-a225c8e1-c0c3-4ffb-a347-0ff28b418648.png)
 
-We then take a plaintext message, prompted from the user, and append bits to it. The complicated compression step is then performed on the message.
+We then take a plaintext message, prompted from the user, and append bits to it. The compression step is then performed on the message.
 
-# How Secure is SHA-512?
+In SHA-256:
+* The message is broken into 512-bit chunks.
+* The default hash values are 32 bits.
+* There are 64 rounds.
+* The array of round constants contains 64 32-bit words.
+* The round constants are based on the first 64 primes.
+* The message is padded such that it is 64 bits less than a multiple of 512.
+* The shift and rotate amounts are different.
+
+SHA-224 and SHA-384 are very similar to SHA-256. However, with SHA-224, the initial hash values are different and the message digest omits the eighth hash value. With SHA-384, the initial hash values are also different and the message digest omits the seventh and eighth hash values.
+
+# How Secure is SHA?
 
 The more bits a message digest has, the more difficult it is to break. Thus, SHA-512 is more secure than other hashing algorithms that output message digests that are comprised of fewer bits. SHA-2 was first published in 2001 and is still in use to this day. However, as computer processing becomes more advanced, SHA-2 hashing algorithms become more vulnerable to attacks, similar to what happened with previous SHA incarnations. Indeed, since 2016, digital certificate authorities have not been allowed to issue SHA-1-signed certificates. Nonetheless, SHA-2 is still considered to be the most secure hashing algorithm, even as SHA-3 was released in 2015. SHA-3 has not been made the industry standard because during its release, companies were the middle of migrating from SHA-1 to SHA-2 and SHA-3 is slower on the software side. However, as computers become more powerful, we will likely see a transition from SHA-2 into SHA-3.
