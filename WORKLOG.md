@@ -64,3 +64,8 @@
 
 ### Israel
 * Updated the homework file.
+
+#6.5.22
+
+### Israel
+* Updated the presentation file, including a more thorough description of the SHA-2 hashing algorithms.
