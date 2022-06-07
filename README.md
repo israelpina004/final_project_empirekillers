@@ -26,11 +26,11 @@ The hash comes out to be the same:  *a591a6d40bf420404a011733cfb7b190d62c65bf0bc
 
 ## "What did you guys make?"
 
-We have replicated the SHA-512 encryption algorithm through a Python program. It is run through the terminal.
+We have replicated the SHA-512 encryption algorithm through a Python program.
 
 ### "How can I check if this works?"
 
-Run our program with a specific word or phrase and run "echo "(same word or phrase)" | sha(bits)sum". Replace (bits) with 224, 256, 384, or 512 depending on which SHA version you used with our program. The two outputs should be the same.
+Run our program in the terminal with a specific word or phrase and then run "echo "(same word or phrase)" | sha(bits)sum". Replace (bits) with 224, 256, 384, or 512 depending on which SHA version you used with our program. The two outputs should be the same.
 
 ### "How does it work?"
 
